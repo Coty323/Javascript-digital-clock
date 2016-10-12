@@ -3,7 +3,7 @@
 <head>
 	<title>Clock</title>
 </head>
-<body>
+<body onload="startTime()">
   <h1>This is a clock</h1>
  <div id="Clock">
  </div>
@@ -17,9 +17,15 @@
       var currentSeconds = currentTime.getSeconds();
       var currentMilliseconds = currentTime.getMilliseconds();
       document.getElementById("Clock").innerHTML = currentHours + ":" + currentMinutes + ":" + currentSeconds + ":" + currentMilliseconds;
+      var currentTime = setInterval(startTime, 1);
     }
 
     startTime();
+
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};
+      return i;
+    }  
    </script> 
 
 </body>
