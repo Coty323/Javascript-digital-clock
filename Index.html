@@ -4,8 +4,21 @@
 	<title>Clock</title>
 </head>
 <body>
-	<h1>This is a clock</h1>
-</script> 
+  <h1>This is a clock</h1>
+ <div id="Clock">
+ </div>
+
+   <script>
+
+    function startTime () {
+     var currentTime = new Date();
+     var currentHours = currentTime.getHours();
+     var currentMinutes = currentTime.getMinutes();
+     var currentSeconds = currentTime.getSeconds();
+     var currentMilliseconds = currentTime.getMilliseconds();
+     document.getElementById('Clock').innerHTML currentHours + ":" + currentMinutes + ":" + currentSeconds + ":" + currentMilliseconds;
+}
+   </script> 
 
 </body>
 </html>
