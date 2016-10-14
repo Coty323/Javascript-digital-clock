@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Clock</title>
-	<link rel="stylesheet" type="text/css" href="clock.css">
+<title>Clock</title>
+<link rel="stylesheet" type="text/css" href="clock.css">
 </head>
 <body onload="startTime()">
-  <h1 class="heading">This is a clock</h1>
- <div id="Clock">
- </div>
- <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+
+  <div id="clockdate">
+    <div class="clockdate-wrapper">
+      <div id="clock"></div>
+      <div id="date"></div>
+    </div>
+  </div>
+
+ 
+
+ <script src="clock.js">
  </script>
-   <script>
-
-    function startTime() {
-      var currentTime = new Date();
-      var currentHours = currentTime.getHours();
-      var currentMinutes = currentTime.getMinutes();
-      var currentSeconds = currentTime.getSeconds();
-      var currentMilliseconds = currentTime.getMilliseconds();
-      document.getElementById("Clock").innerHTML = currentHours + ":" + currentMinutes + ":" + currentSeconds + ":" + currentMilliseconds;
-      var currentTime = setInterval(startTime, 1);
-    }
-
-    startTime();
-
-    function checkTime(i) {
-      if (i < 10) {i = "0" + i};
-      return i;
-    }  
-
-   </script> 
-   <script src="clock.js">
-   </script>
 </body>
 </html>
